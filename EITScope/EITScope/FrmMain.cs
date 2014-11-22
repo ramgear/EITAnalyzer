@@ -318,6 +318,7 @@ namespace EITScope
                 // Send capture mode
                 string cfg = "cfg=";
                 cfg += miMode.Text.ToLower() == "digital" ? "1" : "0";
+                cfg += ",";
                 cfg += miCapOnChanged.Checked ? "1" : "0";
                 serial.WriteLine(cfg);
 
